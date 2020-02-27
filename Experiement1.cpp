@@ -1,6 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+string int2string(int n)
+{
+    string result = "";
+
+    while(n)
+    {
+        result += (n % 10) + '0';
+        n = n / 10;
+    }
+
+    reverse(result.begin(),result.end());
+    return result;
+}
+
 string RLE_encoding(string mess)
 {
     string encrypt_mess = "";
